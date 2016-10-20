@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +19,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb2-bV-EIm">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TBu-1l-GdY">
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-YF-pQG"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="kon-8X-tvW"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-cI-KSU"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="vzu-tq-YxV"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="cRF-8p-bln"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TBu-1l-GdY" firstAttribute="leading" secondItem="Fb2-bV-EIm" secondAttribute="leading" id="67s-yg-sVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="TBu-1l-GdY" secondAttribute="trailing" id="GBg-FZ-1Ap"/>
+                                    <constraint firstItem="TBu-1l-GdY" firstAttribute="top" secondItem="Fb2-bV-EIm" secondAttribute="top" id="Xf9-Bq-ZS5"/>
+                                    <constraint firstAttribute="bottom" secondItem="TBu-1l-GdY" secondAttribute="bottom" id="dUP-RP-Z7l"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fb2-bV-EIm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JYX-4a-ity"/>
+                            <constraint firstItem="TBu-1l-GdY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Kx7-x6-LHK"/>
+                            <constraint firstItem="TBu-1l-GdY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="5:1" id="Q6B-tW-qTO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fb2-bV-EIm" secondAttribute="trailing" id="XXa-a8-yS2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fb2-bV-EIm" secondAttribute="bottom" id="XcC-BU-vYi"/>
+                            <constraint firstItem="Fb2-bV-EIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pmr-YG-aeN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -25,4 +56,11 @@
             <point key="canvasLocation" x="281.5" y="396.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
